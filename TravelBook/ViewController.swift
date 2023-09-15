@@ -149,10 +149,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
         
         let reuseId = "myAnnotation"
-        var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
+        var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKMarkerAnnotationView
         
         if pinView == nil {
-            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            pinView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             pinView?.canShowCallout = true
             pinView?.tintColor = UIColor.black
             
